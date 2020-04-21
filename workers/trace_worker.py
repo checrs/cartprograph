@@ -209,7 +209,7 @@ def main():
                 redis_client.publish(channel, trace)
 
             try:
-                with timeout(180):
+                with timeout(300):
                     machine.run()
 
             except Block:
